@@ -1,0 +1,6 @@
+今天的主要成果：
+1.学习了git的版本管理思路和基本操作
+详细地学习了http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000上的git教程
+2.配置好安卓开发环境
+安装了android studio，配置好环境，运行了helloWorld程序
+
