@@ -1,3 +1,3 @@
-2017/6/26ѧϰ����
-���磺��װ����Git��Android Studio���������
-���磺ѧϰ�����Ƽ�����ѩ���Git�̳��Լ�Android Studio��helloworld
+2017/6/26学习报告
+上午：安装配置Git和Android Studio及相关配置
+下午：学习吕正推荐的廖雪峰的Git教程以及Android Studio的helloworld
