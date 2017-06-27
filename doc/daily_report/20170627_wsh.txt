@@ -2,4 +2,5 @@
 和队友一起讨论了git的协作模式，将源项目fork到自己的账户，设置为本地的origin/master。
 主要在学习google官方的Android Training教程，同时熟悉Android Stadio的使用。
 完成了Building Your First App部分，开始学习Supporting Different Devices部分。
-期间遇到一些如gradle更新，
+期间遇到一些如gradle刷新、翻墙、编译问题，与队友讨论后解决。
+
