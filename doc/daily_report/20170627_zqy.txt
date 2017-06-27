@@ -1,0 +1,7 @@
+﻿上午：
+    将Android Studio的配置重新搭了一下，并进行虚拟机设置，成功运行了helloworld程序
+下午：
+    最主要的部分还是学习Android Studio的使用以及Android开发原理
+    在 https://developer.android.com/training/ 网站上进行基础部分的学习
+    通过学习Building Your First App部分，完成发送信息以及返回信息的操作
+    同时从GitHub上fork了一次，然后吕正同学给讲解了Git的操作的一些要点，减少意外情况发生
