@@ -1,0 +1,7 @@
+队长张维杰今天全天有课，我们小组三人今天主要是学习android开发。
+
+昨天大家都写了报告，提交在git上遇到一些问题，包括字符集非UTF-8，未设置名字邮箱，commit message不够简明扼要等。我跟大家继续简单介绍了git操作的一些common practice。为了避免误操作repo导致的潜在tragedy，我请两位不太熟悉git的队友张乔瑀和吴世航fork了repo，由我主要负责merge。
+
+我利用上午剩下的时间将android studio与android模拟器配置好，跑了个Hello World。下午，我按照android studio官方的教程，与队友一同讨论学习，并按教程实践创建简单的gui程序，主要功能有控件大小按照屏幕自适应，与简单的利用intent调用activity并传递对象。
+
+下午，我配置了数据库服务器，以便我们小组4人合用一个数据库进行开发实验。
