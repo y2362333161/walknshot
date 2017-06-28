@@ -1,0 +1,5 @@
+学习日志：
+1.继续学习Android开发官方教程，完成Support Different Devices和Fragment部分。之后将会一边继续学习一边进行开发。
+2.查阅资料学习了Activity生命周期和Java的接口回调，了解Activity、Fragment的相互通信。
+3.和队友一起讨论了前端的UI基本设计。
+4.尝试在Android Stadio中用自己的手机实机调试App。
