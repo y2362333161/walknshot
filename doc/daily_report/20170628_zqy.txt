@@ -1,0 +1,5 @@
+﻿学习记录：
+上午：
+	先在演讲厅听老师讲解项目管理有关的内容，之后在https://developer.android.com/training/basics/fragments/index.html学习有关fragments的内容。
+下午：
+	大致了解了一下AndroidApp如何使用百度地图和google地图的教程，之后组长组织对app的原型界面以及后台的基础实现进行了简单讨论，然后对数据库模型和存储方式有一个大概的概念。
