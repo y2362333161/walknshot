@@ -1,4 +1,4 @@
-﻿上午：
+上午：
     将Android Studio的配置重新搭了一下，并进行虚拟机设置，成功运行了helloworld程序
 下午：
     最主要的部分还是学习Android Studio的使用以及Android开发原理
