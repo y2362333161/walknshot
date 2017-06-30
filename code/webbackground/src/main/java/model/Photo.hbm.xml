@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="model.Photo" table="photo">
+		<id name="id" type="int">
+			<column name="photo_id" />
+			<generator class="assigned" />
+		</id>
+		<property name="pathid" type="int">
+			<column name="path_id" />
+		</property>
+		<property name="time" type="java.sql.Date">
+			<column name="time" />
+		</property>
+		<property name="filename" type="java.lang.String">
+			<column name="filename" />
+		</property>
+		<property name="Private" type="boolean">
+			<column name="isPrivate" sql-type="Boolean"/>
+		</property>
+		<property name="views" type="int">
+			<column name="views" />
+		</property>
+	</class>
+</hibernate-mapping>
