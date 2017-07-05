@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:orientation="vertical"
-android:layout_width="fill_parent"
-android:layout_height="fill_parent">
-<ImageView android:id="@+id/imageView"
-    android:adjustViewBounds="true"
-    android:layout_gravity="center"
-    android:minWidth="150dip"
-    android:minHeight="150dip"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
-<Button android:id="@+id/btnPhone"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="相册" />
-<Button android:id="@+id/btnTakePicture"
-    android:layout_height="wrap_content"
-    android:layout_width="fill_parent"
-    android:text="拍照" />
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF"
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:background="@android:color/darker_gray"
+        android:minHeight="150dip"
+        android:minWidth="150dip" />
+
+    <Button
+        android:id="@+id/btnPhone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="相册" />
+
+    <Button android:id="@+id/btnTakePicture"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:text="拍照" />
+    <Button android:id="@+id/sharePictureTimeline"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:text="分享到微信朋友圈" />
+
+    <Button
+        android:id="@+id/sharePictureSession"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="分享给微信好友" />
 </LinearLayout>
