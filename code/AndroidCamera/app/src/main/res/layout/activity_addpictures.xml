@@ -30,24 +30,21 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
             <!-- 显示图片 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_alignParentBottom="true" >
+                    android:orientation="vertical">
                     <!-- 设置运行多行 设置圆角图形 黑色字体-->
 
                     <GridView
                         android:id="@+id/gridView1"
                         android:layout_width="fill_parent"
-                        android:layout_height="200dp"
-                        android:layout_margin="20dp"
+                        android:layout_height="200dip"
+                        android:layout_margin="20dip"
                         android:background="@drawable/bg_gridview"
-                        android:horizontalSpacing="5dp"
-                        android:verticalSpacing="5dp"
                         android:numColumns="4"
                         android:stretchMode="columnWidth"
                         android:gravity="center" >
@@ -55,22 +52,20 @@
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:text="(友情提示:点击图片可以删除已添加图片)"
+                        android:text="@string/hint"
                         android:gravity="center" />
                 </LinearLayout>
             <!-- 底部按钮 -->
             <LinearLayout
                 android:id="@+id/Layout_bottom"
-                android:layout_alignParentBottom="true"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center" >
                 <TextView
-                    android:id="@+id/shareToTimeline"
+                    android:id="@+id/submitPictures"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
                     android:layout_marginTop="15dip"
                     android:background="@drawable/bg_text"
                     android:gravity="center"
@@ -78,15 +73,14 @@
                     android:paddingLeft="20dip"
                     android:paddingRight="20dip"
                     android:paddingTop="5dip"
-                    android:text="@string/shareToTimeline"
+                    android:text="@string/submitPictures"
                     android:textAllCaps="true"
-                    android:textColor="@color/black"
+                    android:textColor="@drawable/text_selector"
                     android:textSize="20sp" />
                 <TextView
-                    android:id="@+id/shareToSession"
+                    android:id="@+id/shareToWeChat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
                     android:layout_marginTop="15dip"
                     android:background="@drawable/bg_text"
                     android:gravity="center"
@@ -94,9 +88,9 @@
                     android:paddingLeft="20dip"
                     android:paddingRight="20dip"
                     android:paddingTop="5dip"
-                    android:text="@string/shareToSession"
+                    android:text="@string/shareToWeChat"
                     android:textAllCaps="true"
-                    android:textColor="@color/black"
+                    android:textColor="@drawable/text_selector"
                     android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>

@@ -1,6 +1,16 @@
 <resources>
+
     <string name="app_name">拍照</string>
     <string name="title_addpictures">添加照片</string>
-    <string name="shareToTimeline">分享到微信朋友圈</string>
-    <string name="shareToSession">分享给微信好友</string>
+    <string name="title_beautifypictures">美化照片</string>
+    <string name="submitPictures">提交照片</string>
+    <string name="shareToWeChat">分享到微信</string>
+    <string name="hint">(友情提示:点击图片可以删除已添加图片)</string>
+
+    <string name="savePicture">保存照片</string>
+    <string name="cancelBeautify">撤销美化</string>
+    <string name="oldRemember">怀旧</string>
+    <string name="sunShine">光照</string>
+    <string name="sketch">素描</string>
+
 </resources>
