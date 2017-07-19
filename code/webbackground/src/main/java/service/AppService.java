@@ -1,38 +1,71 @@
 package service;
 
+import java.math.BigInteger;
 import java.util.List;
 
-import model.Comment;
-import model.Path;
-import model.Latlng;
-import model.Photo;
+import model.Picture;
+import model.Spot;
+import model.Storage;
+import model.Token;
 import model.User;
 
 public interface AppService {
 
 	/**
-	 * comment
+	 * picture
 	 * 
 	 */
-	public List<Comment> getAllComments();
+	public Integer addPicture(Picture picture);
 
-	/**
-	 * path
-	 * 
-	 */
-	public List<Path> getAllPaths();
+	public void deletePicture(Picture picture);
 
-	/**
-	 * latlng
-	 * 
-	 */
-	public List<Latlng> getAllLatlngs();
+	public void updatePicture(Picture picture);
 
+	public Picture getPictureById(int id);
+
+	public List<Picture> getAllPictures();
+	
 	/**
-	 * photo
+	 * spot
 	 * 
 	 */
-	public List<Photo> getAllPhotos();
+	public Integer addSpot(Spot spot);
+
+	public void deleteSpot(Spot spot);
+
+	public void updateSpot(Spot spot);
+
+	public Spot getSpotById(BigInteger id);
+
+	public List<Spot> getAllSpots();
+	
+	/**
+	 * storage
+	 * 
+	 */
+	public Integer addStorage(Storage storage);
+
+	public void deleteStorage(Storage storage);
+
+	public void updateStorage(Storage storage);
+
+	public Storage getStorageById(int id);
+
+	public List<Storage> getAllStorages();
+	
+	/**
+	 * token
+	 * 
+	 */
+	public Integer addToken(Token token);
+
+	public void deleteToken(Token token);
+
+	public void updateToken(Token token);
+
+	public Token getTokenById(int id);
+
+	public List<Token> getAllTokens();
 	
 	/**
 	 * user

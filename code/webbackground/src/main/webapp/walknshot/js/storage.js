@@ -1,23 +1,21 @@
 $(function() {
 
 	$("#save").click(function(e) {
-		var username = $("input[name='username']").val();
-		var password = $("input[name='password']").val();
-		console.log(username, password);
+		var filename = $("input[name='filename']").val();
+		console.log(filename);
 
 		var dataset = e.currentTarget.dataset;
 		var id = dataset.id;
 
 		if (id != "") { // Edit
 			jQuery.ajax({
-				url : 'updateUserPro',
-				cache:false,
+				url : 'updateStoragePro',
+				cache : false,
 				processData : true,
 				dataType : "text",
 				data : {
 					id : id,
-					username : username,
-					password : password,
+					filename : filename,
 				},
 				success : function(data) {
 					location.reload();
@@ -25,13 +23,12 @@ $(function() {
 			});
 		} else { // Add
 			jQuery.ajax({
-				url : 'addUserPro',
-				cache:false,
+				url : 'addStoragePro',
+				cache : false,
 				processData : true,
 				dataType : "text",
 				data : {
-					username : username,
-					password : password,
+					filename : filename,
 				},
 				success : function(data) {
 					location.reload();
@@ -59,8 +56,8 @@ $(function() {
 					var dataset = e.currentTarget.dataset;
 					var id = dataset.id;
 					jQuery.ajax({
-						url : 'deleteUserPro',
-						cache:false,
+						url : 'deleteStoragePro',
+						cache : false,
 						processData : true,
 						dataType : "text",
 						data : {
@@ -79,8 +76,7 @@ $(function() {
 	$("#add").click(function(e) {
 		$('#modalTitle').html("Add");
 
-		$("input[name='username']").val("");
-		$("input[name='password']").val("");
+		$("input[name='filename']").val("");
 
 		$("#save").attr("data-id", "");
 		$('#modal').modal('show');
@@ -92,8 +88,7 @@ $(function() {
 		var id = dataset.id;
 		console.log(id);
 
-		$("input[name='username']").val(dataset.username);
-		$("input[name='password']").val(dataset.password);
+		$("input[name='filename']").val(dataset.filename);
 
 		$("#save").attr("data-id", dataset.id);
 		$('#modal').modal('show');

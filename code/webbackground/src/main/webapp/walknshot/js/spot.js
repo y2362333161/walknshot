@@ -1,23 +1,25 @@
 $(function() {
 
 	$("#save").click(function(e) {
-		var username = $("input[name='username']").val();
-		var password = $("input[name='password']").val();
-		console.log(username, password);
+		var uid = $("input[name='uid']").val();
+		var latitude = $("input[name='latitude']").val();
+		var longitude = $("input[name='longitude']").val();
+		console.log(uid, latitude, longitude);
 
 		var dataset = e.currentTarget.dataset;
 		var id = dataset.id;
 
 		if (id != "") { // Edit
 			jQuery.ajax({
-				url : 'updateUserPro',
-				cache:false,
+				url : 'updateSpotPro',
+				cache : false,
 				processData : true,
 				dataType : "text",
 				data : {
 					id : id,
-					username : username,
-					password : password,
+					uid : uid,
+					latitude : latitude,
+					longitude : longitude,
 				},
 				success : function(data) {
 					location.reload();
@@ -25,13 +27,14 @@ $(function() {
 			});
 		} else { // Add
 			jQuery.ajax({
-				url : 'addUserPro',
-				cache:false,
+				url : 'addSpotPro',
+				cache : false,
 				processData : true,
 				dataType : "text",
 				data : {
-					username : username,
-					password : password,
+					uid : uid,
+					latitude : latitude,
+					longitude : longitude,
 				},
 				success : function(data) {
 					location.reload();
@@ -59,8 +62,8 @@ $(function() {
 					var dataset = e.currentTarget.dataset;
 					var id = dataset.id;
 					jQuery.ajax({
-						url : 'deleteUserPro',
-						cache:false,
+						url : 'deleteSpotPro',
+						cache : false,
 						processData : true,
 						dataType : "text",
 						data : {
@@ -79,8 +82,9 @@ $(function() {
 	$("#add").click(function(e) {
 		$('#modalTitle').html("Add");
 
-		$("input[name='username']").val("");
-		$("input[name='password']").val("");
+		$("input[name='uid']").val("");
+		$("input[name='latitude']").val("");
+		$("input[name='longitude']").val("");
 
 		$("#save").attr("data-id", "");
 		$('#modal').modal('show');
@@ -92,8 +96,9 @@ $(function() {
 		var id = dataset.id;
 		console.log(id);
 
-		$("input[name='username']").val(dataset.username);
-		$("input[name='password']").val(dataset.password);
+		$("input[name='uid']").val(dataset.uid);
+		$("input[name='latitude']").val(dataset.latitude);
+		$("input[name='longitude']").val(dataset.longitude);
 
 		$("#save").attr("data-id", dataset.id);
 		$('#modal').modal('show');

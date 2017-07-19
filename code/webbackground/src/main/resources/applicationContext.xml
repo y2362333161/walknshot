@@ -22,10 +22,10 @@
 		p:dataSource-ref="dataSource">
 		<property name="mappingResources">
 			<list>
-				<value>model/Comment.hbm.xml</value>
-				<value>model/Path.hbm.xml</value>
-				<value>model/Latlng.hbm.xml</value>
-				<value>model/Photo.hbm.xml</value>
+				<value>model/Picture.hbm.xml</value>
+				<value>model/Spot.hbm.xml</value>
+				<value>model/Storage.hbm.xml</value>
+				<value>model/Token.hbm.xml</value>
 				<value>model/User.hbm.xml</value>
 			</list>
 		</property>
@@ -41,16 +41,16 @@
 	</bean>
 
 	<!-- DAO Bean -->
-	<bean id="commentDao" class="dao.impl.CommentDaoImpl">
+	<bean id="pictureDao" class="dao.impl.PictureDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	<bean id="pathDao" class="dao.impl.PathDaoImpl">
+	<bean id="spotDao" class="dao.impl.SpotDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	<bean id="latlngDao" class="dao.impl.LatlngDaoImpl">
+	<bean id="storageDao" class="dao.impl.StorageDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	<bean id="photoDao" class="dao.impl.PhotoDaoImpl">
+	<bean id="tokenDao" class="dao.impl.TokenDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	<bean id="userDao" class="dao.impl.UserDaoImpl">
@@ -60,10 +60,10 @@
 	<!-- Service -->
 	<bean id="appService" class="service.impl.AppServiceImpl">
 		<!-- DAO -->
-		<property name="commentDao" ref="commentDao"></property>
-		<property name="pathDao" ref="pathDao"></property>
-		<property name="latlngDao" ref="latlngDao"></property>
-		<property name="photoDao" ref="photoDao"></property>
+		<property name="pictureDao" ref="pictureDao"></property>
+		<property name="spotDao" ref="spotDao"></property>
+		<property name="storageDao" ref="storageDao"></property>
+		<property name="tokenDao" ref="tokenDao"></property>
 		<property name="userDao" ref="userDao"></property>
 	</bean>
 

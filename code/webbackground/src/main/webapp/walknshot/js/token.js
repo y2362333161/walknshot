@@ -1,23 +1,23 @@
 $(function() {
 
 	$("#save").click(function(e) {
-		var username = $("input[name='username']").val();
-		var password = $("input[name='password']").val();
-		console.log(username, password);
+		var uid = $("input[name='uid']").val();
+		var passphrase = $("input[name='passphrase']").val();
+		console.log(uid, passphrase);
 
 		var dataset = e.currentTarget.dataset;
 		var id = dataset.id;
 
 		if (id != "") { // Edit
 			jQuery.ajax({
-				url : 'updateUserPro',
-				cache:false,
+				url : 'updateTokenPro',
+				cache : false,
 				processData : true,
 				dataType : "text",
 				data : {
 					id : id,
-					username : username,
-					password : password,
+					uid : uid,
+					passphrase : passphrase,
 				},
 				success : function(data) {
 					location.reload();
@@ -25,13 +25,13 @@ $(function() {
 			});
 		} else { // Add
 			jQuery.ajax({
-				url : 'addUserPro',
-				cache:false,
+				url : 'addTokenPro',
+				cache : false,
 				processData : true,
 				dataType : "text",
 				data : {
-					username : username,
-					password : password,
+					uid : uid,
+					passphrase : passphrase,
 				},
 				success : function(data) {
 					location.reload();
@@ -59,8 +59,8 @@ $(function() {
 					var dataset = e.currentTarget.dataset;
 					var id = dataset.id;
 					jQuery.ajax({
-						url : 'deleteUserPro',
-						cache:false,
+						url : 'deleteTokenPro',
+						cache : false,
 						processData : true,
 						dataType : "text",
 						data : {
@@ -79,8 +79,8 @@ $(function() {
 	$("#add").click(function(e) {
 		$('#modalTitle').html("Add");
 
-		$("input[name='username']").val("");
-		$("input[name='password']").val("");
+		$("input[name='uid']").val("");
+		$("input[name='passphrase']").val("");
 
 		$("#save").attr("data-id", "");
 		$('#modal').modal('show');
@@ -92,8 +92,8 @@ $(function() {
 		var id = dataset.id;
 		console.log(id);
 
-		$("input[name='username']").val(dataset.username);
-		$("input[name='password']").val(dataset.password);
+		$("input[name='uid']").val(dataset.uid);
+		$("input[name='passphrase']").val(dataset.passphrase);
 
 		$("#save").attr("data-id", dataset.id);
 		$('#modal').modal('show');

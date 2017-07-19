@@ -2,18 +2,17 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
-
 <hibernate-mapping>
-	<class name="model.User" table="user">
+	<class name="model.Token" table="token">
 		<id name="id" type="int">
 			<column name="id" />
 			<generator class="assigned" />
 		</id>
-		<property name="username" type="java.lang.String">
-			<column name="username" />
+		<property name="uid" type="int">
+			<column name="uid" />
 		</property>
-		<property name="password" type="java.lang.String">
-			<column name="password" />
+		<property name="passphrase" type="java.lang.String">
+			<column name="passphrase" />
 		</property>
 	</class>
 </hibernate-mapping>

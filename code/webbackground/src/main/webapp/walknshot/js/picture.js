@@ -1,23 +1,23 @@
 $(function() {
 
 	$("#save").click(function(e) {
-		var username = $("input[name='username']").val();
-		var password = $("input[name='password']").val();
-		console.log(username, password);
+		var spotid = $("input[name='spotid']").val();
+		var storageid = $("input[name='storageid']").val();
+		console.log(spotid, storageid);
 
 		var dataset = e.currentTarget.dataset;
 		var id = dataset.id;
 
 		if (id != "") { // Edit
 			jQuery.ajax({
-				url : 'updateUserPro',
+				url : 'updatePicturePro',
 				cache:false,
 				processData : true,
 				dataType : "text",
 				data : {
 					id : id,
-					username : username,
-					password : password,
+					spotid : spotid,
+					storageid : storageid,
 				},
 				success : function(data) {
 					location.reload();
@@ -25,13 +25,13 @@ $(function() {
 			});
 		} else { // Add
 			jQuery.ajax({
-				url : 'addUserPro',
+				url : 'addPicturePro',
 				cache:false,
 				processData : true,
 				dataType : "text",
 				data : {
-					username : username,
-					password : password,
+					spotid : spotid,
+					storageid : storageid,
 				},
 				success : function(data) {
 					location.reload();
@@ -59,7 +59,7 @@ $(function() {
 					var dataset = e.currentTarget.dataset;
 					var id = dataset.id;
 					jQuery.ajax({
-						url : 'deleteUserPro',
+						url : 'deletePicturePro',
 						cache:false,
 						processData : true,
 						dataType : "text",
@@ -79,8 +79,8 @@ $(function() {
 	$("#add").click(function(e) {
 		$('#modalTitle').html("Add");
 
-		$("input[name='username']").val("");
-		$("input[name='password']").val("");
+		$("input[name='spotid']").val("");
+		$("input[name='storageid']").val("");
 
 		$("#save").attr("data-id", "");
 		$('#modal').modal('show');
@@ -92,8 +92,8 @@ $(function() {
 		var id = dataset.id;
 		console.log(id);
 
-		$("input[name='username']").val(dataset.username);
-		$("input[name='password']").val(dataset.password);
+		$("input[name='spotid']").val(dataset.spotid);
+		$("input[name='storageid']").val(dataset.storageid);
 
 		$("#save").attr("data-id", dataset.id);
 		$('#modal').modal('show');

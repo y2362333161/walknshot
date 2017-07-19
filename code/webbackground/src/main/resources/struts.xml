@@ -7,38 +7,74 @@
 	<constant name="struts.i18n.encoding" value="utf-8" />
 	<constant name="struts.devMode" value="true" />
 	<package name="process" extends="struts-default">
-		<!-- Comment -->
-		<action name="allCommentsPro" class="action.AllCommentsAction">
-			<result name="success"></result>
+		<!-- Picture -->
+		<action name="allPicturesPro" class="action.AllPicturesAction">
+			<result name="success">/walknshot/jsp/pictures.jsp</result>
+		</action>
+		<action name="addPicturePro" class="action.AddPictureAction">
+			<result name="success">/walknshot/jsp/pictures.jsp</result>
+		</action>
+		<action name="updatePicturePro" class="action.UpdatePictureAction">
+			<result name="success">/walknshot/jsp/pictures.jsp</result>
+		</action>
+		<action name="deletePicturePro" class="action.DeletePictureAction">
+			<result name="success">/walknshot/jsp/pictures.jsp</result>
 		</action>
 
-		<!-- Path -->
-		<action name="allPathsPro" class="action.AllPathsAction">
-			<result name="success"></result>
+		<!-- Spot -->
+		<action name="allSpotsPro" class="action.AllSpotsAction">
+			<result name="success">/walknshot/jsp/spots.jsp</result>
+		</action>
+		<action name="addSpotPro" class="action.AddSpotAction">
+			<result name="success">/walknshot/jsp/spots.jsp</result>
+		</action>
+		<action name="updateSpotPro" class="action.UpdateSpotAction">
+			<result name="success">/walknshot/jsp/spots.jsp</result>
+		</action>
+		<action name="deleteSpotPro" class="action.DeleteSpotAction">
+			<result name="success">/walknshot/jsp/spots.jsp</result>
 		</action>
 
-		<!-- LatLng -->
-		<action name="allLatLngsPro" class="action.AllLatLngsAction">
-			<result name="success"></result>
+		<!-- Storage -->
+		<action name="allStoragesPro" class="action.AllStoragesAction">
+			<result name="success">/walknshot/jsp/storages.jsp</result>
+		</action>
+		<action name="addStoragePro" class="action.AddStorageAction">
+			<result name="success">/walknshot/jsp/storages.jsp</result>
+		</action>
+		<action name="updateStoragePro" class="action.UpdateStorageAction">
+			<result name="success">/walknshot/jsp/storages.jsp</result>
+		</action>
+		<action name="deleteStoragePro" class="action.DeleteStorageAction">
+			<result name="success">/walknshot/jsp/storages.jsp</result>
 		</action>
 		
-		<!-- Photo -->
-		<action name="allPhotosPro" class="action.AllPhotosAction">
-			<result name="success"></result>
+		<!-- Token -->
+		<action name="allTokensPro" class="action.AllTokensAction">
+			<result name="success">/walknshot/jsp/tokens.jsp</result>
+		</action>
+		<action name="addTokenPro" class="action.AddTokenAction">
+			<result name="success">/walknshot/jsp/tokens.jsp</result>
+		</action>
+		<action name="updateTokenPro" class="action.UpdateTokenAction">
+			<result name="success">/walknshot/jsp/tokens.jsp</result>
+		</action>
+		<action name="deleteTokenPro" class="action.DeleteTokenAction">
+			<result name="success">/walknshot/jsp/tokens.jsp</result>
 		</action>
 		
 		<!-- Manager -->
 		<action name="allUsersPro" class="action.AllUsersAction">
-			<result name="success">/walknshot/jsp/manager.jsp</result>
+			<result name="success">/walknshot/jsp/users.jsp</result>
 		</action>
 		<action name="addUserPro" class="action.AddUserAction">
-			<result name="success">/walknshot/jsp/manager.jsp</result>
+			<result name="success">/walknshot/jsp/users.jsp</result>
 		</action>
 		<action name="updateUserPro" class="action.UpdateUserAction">
-			<result name="success">/walknshot/jsp/manager.jsp</result>
+			<result name="success">/walknshot/jsp/users.jsp</result>
 		</action>
 		<action name="deleteUserPro" class="action.DeleteUserAction">
-			<result name="success">/walknshot/jsp/manager.jsp</result>
+			<result name="success">/walknshot/jsp/users.jsp</result>
 		</action>
 
 		<action name="*">
